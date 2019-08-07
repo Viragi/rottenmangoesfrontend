@@ -12,9 +12,8 @@ class NavBar extends React.Component{
       }
       this.myRef= React.createRef()
     }
-r
+
     handleInput=(e)=>{
-      //console.log(e);
       this.setState({
         [e.target.name] : e.target.value
       })
@@ -35,7 +34,7 @@ r
                     <input type="hidden"  name="type" value="search"/>
                     <input class="form-control mr-sm-2" placeholder="Search" name="searchTerm" 
                        ref={this.myRef} required/>
-                    <button class="btn btn-link my-2 my-sm-0" type="submit" id="searchButton">
+                     <button class="btn btn-link my-2 my-sm-0" type="submit" id="searchButton">
                      <Link to= {"/movies/search?search="+(this.myRef.current ? this.myRef.current.value : "")}> Search</Link>
                     </button>
                   </form>
@@ -45,6 +44,7 @@ r
             </div>  
             <Route exact path= "/movies" component={HomePage}/>
             <Route  path="/movies/search" component={SearchMovieList}/>
+            {/* <Route path="/movies/:id" componenet ={}/> */}
 
           </div>
         )

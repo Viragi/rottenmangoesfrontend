@@ -8,7 +8,7 @@ class SearchMovieList extends React.Component{
         this.updateSearchResult();
     }
     componentDidUpdate(){
-        this.updateSearchResult();
+        //this.updateSearchResult();
     }
 
     updateSearchResult() {
@@ -21,7 +21,6 @@ class SearchMovieList extends React.Component{
     
 
     render(){
-        // console.log("SSEEAARRCCHH resulttt", this.props.searchResult);
         var  movieResult;
         if(this.props.searchResult != undefined && this.props.searchResult.data!=undefined){
                 movieResult = this.props.searchResult.data.map((item)=>{
